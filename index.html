@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atlantic City Wash Dry Fold | #1 Laundry Pickup & Delivery Service</title>
-    <meta name="description" content="Atlantic City's premier wash and fold laundry delivery service. Schedule a pickup online in 60 seconds. Expert laundry service for residents, hotels, casinos, and Airbnbs in Atlantic City.">
-    <meta name="keywords" content="laundry service atlantic city, wash and fold atlantic city, laundry pickup delivery, schedule laundry pickup, dry cleaning atlantic city, hotel laundry service, casino laundry valet, same day laundry delivery, wash dry fold">
+    <title>Atlantic City Wash Dry Fold</title>
+    <meta name="description" content="Atlantic City's #1 pick wash dry & fold delivery service company. 4-hour rush available. Expert wash, dry, and fold for residents, hotels, casinos, and Airbnbs in Atlantic City.">
+    <meta name="keywords" content="laundry service atlantic city, wash and fold, laundry pickup delivery, dry cleaning atlantic city, hotel laundry service, casino laundry valet, same day laundry">
     <meta name="robots" content="index, follow">
     
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="AC Wash Dry Fold | Atlantic City Laundry Pickup & Delivery">
-    <meta property="og:description" content="Atlantic City’s #1 wash and fold laundry delivery service. Schedule your pickup online today.">
+    <meta property="og:title" content="AC Wash Dry Fold Pick up & delivery service | Atlantic City Laundry Concierge">
+    <meta property="og:description" content="Atlantic City’s #1 pick wash dry & fold delivery service company.">
     <meta property="og:image" content="https://zgnpmogdjnnhpwewavnr.supabase.co/storage/v1/object/public/project-images/9ffe658b-8f8c-4b8f-be7b-273eadefa75c/1772549543171-wpu1hk.jpeg">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     
     <style>
@@ -24,9 +24,6 @@
             --gold-light: #e6c888;
             --dark: #0f172a;
             --deep-slate: #020617;
-        }
-        html {
-            scroll-behavior: smooth;
         }
         body {
             font-family: 'Inter', sans-serif;
@@ -49,105 +46,99 @@
             transform: translateY(0);
         }
         
-        /* Refined Glassmorphism */
+        /* Glassmorphism */
         .glass-panel {
-            background: linear-gradient(145deg, rgba(15, 23, 42, 0.9) 0%, rgba(2, 6, 23, 0.95) 100%);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(197, 160, 89, 0.15);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         }
         
         .gold-glow {
-            box-shadow: 0 0 30px rgba(197, 160, 89, 0.2);
+            box-shadow: 0 0 20px rgba(197, 160, 89, 0.15);
         }
         
         /* Interactive Elements */
         .hover-lift {
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .hover-lift:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px -10px rgba(197, 160, 89, 0.25);
-            border-color: rgba(197, 160, 89, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px -10px rgba(197, 160, 89, 0.15);
         }
-
-        /* Custom Scrollbar for Jotform container if needed */
-        .jotform-wrapper {
-            background: #ffffff;
-            border-radius: 1rem;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-            overflow: hidden;
-            border: 1px solid rgba(197, 160, 89, 0.3);
+        
+        /* Form Inputs */
+        input, textarea {
+            transition: all 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 0.375rem;
         }
-
-        .text-gradient {
-            background: linear-gradient(to right, #e6c888, #c5a059);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 1px var(--gold);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        input::placeholder, textarea::placeholder {
+            color: #64748b;
         }
     </style>
 </head>
 <body class="antialiased selection:bg-[#c5a059] selection:text-black">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 flex flex-col transition-all duration-300 shadow-2xl">
+    <nav class="fixed w-full z-50 flex flex-col transition-all duration-300 shadow-lg">
         
         <!-- Top Announcement Bar -->
-        <div class="bg-gradient-to-r from-[#b38d46] via-[#c5a059] to-[#b38d46] text-[#020617] text-[10px] md:text-xs font-bold text-center py-2.5 uppercase tracking-[0.2em] px-4 relative z-20">
+        <div class="bg-[#c5a059] text-[#020617] text-[10px] md:text-xs font-bold text-center py-2 uppercase tracking-[0.15em] px-4 relative z-20">
             ATLANTIC CITY’S #1 PICK UP, WASH, DRY, FOLD, AND Drop off Service!
         </div>
 
         <!-- Main Navbar -->
-        <div class="w-full bg-[#020617]/90 backdrop-blur-xl border-b border-[#c5a059]/10 relative z-10">
+        <div class="w-full bg-[#020617]/95 backdrop-blur-md border-b border-white/5 relative z-10">
             <div class="max-w-7xl mx-auto px-4 sm:px-6">
                 <div class="relative flex justify-between items-center h-24 md:h-28">
                     
                     <!-- Mobile Left: Call Icon -->
-                    <a href="tel:+16094310538" class="md:hidden z-20 w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 text-white hover:bg-[#c5a059] hover:text-[#020617] transition-all" aria-label="Call to request service">
-                        <i data-lucide="phone" class="w-4 h-4"></i>
+                    <a href="tel:+16094310538" class="md:hidden z-20 text-white hover:text-[#c5a059] transition-colors p-2" aria-label="Call to request service">
+                        <i data-lucide="phone" class="w-6 h-6"></i>
                     </a>
 
                     <!-- Desktop Left Links -->
-                    <div class="hidden md:flex items-center space-x-8 w-1/3">
-                        <a href="#process" class="text-xs font-bold text-slate-300 hover:text-[#c5a059] transition-colors uppercase tracking-[0.2em] flex items-center gap-2 group">
-                            <span class="w-1 h-1 rounded-full bg-[#c5a059] opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                            How It Works
-                        </a>
-                        <a href="#services" class="text-xs font-bold text-slate-300 hover:text-[#c5a059] transition-colors uppercase tracking-[0.2em] flex items-center gap-2 group">
-                            <span class="w-1 h-1 rounded-full bg-[#c5a059] opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                            Services
-                        </a>
+                    <div class="hidden md:flex items-center space-x-10 w-1/3">
+                        <a href="#process" class="text-xs font-bold text-slate-300 hover:text-[#c5a059] transition-colors uppercase tracking-[0.2em]">How It Works</a>
+                        <a href="#services" class="text-xs font-bold text-slate-300 hover:text-[#c5a059] transition-colors uppercase tracking-[0.2em]">Services</a>
                     </div>
 
-                    <!-- Center Logo -->
+                    <!-- Center Logo (Absolute center on Mobile, Flex on Desktop) -->
                     <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:static md:translate-x-0 md:translate-y-0 md:flex md:justify-center md:w-1/3 z-10 w-full max-w-[280px] md:max-w-none pointer-events-none md:pointer-events-auto">
-                        <a href="#" class="group flex flex-col items-center text-center pointer-events-auto py-2 transition-transform duration-500 hover:scale-105">
-                            <div class="text-xl md:text-3xl font-bold text-white casino-font tracking-[0.25em] group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#e6c888] group-hover:to-[#c5a059] transition-all drop-shadow-2xl">
+                        <a href="#" class="group flex flex-col items-center text-center pointer-events-auto py-2 transition-transform duration-300 hover:scale-105">
+                            <h1 class="text-xl md:text-2xl font-bold text-white casino-font tracking-[0.2em] group-hover:text-[#e6c888] transition-colors drop-shadow-lg">
                                 AC WASH DRY FOLD
-                            </div>
-                            <div class="flex items-center justify-center gap-4 mt-2 w-full opacity-80 group-hover:opacity-100 transition-opacity">
-                                <span class="h-px w-10 bg-gradient-to-r from-transparent to-[#c5a059]"></span>
-                                <span class="text-[0.65rem] font-medium text-[#c5a059] uppercase tracking-[0.3em] whitespace-nowrap">
+                            </h1>
+                            <div class="flex items-center justify-center gap-3 mt-1.5 w-full">
+                                <span class="h-px w-8 bg-white/10 group-hover:bg-[#c5a059]/50 transition-colors"></span>
+                                <span class="text-[0.6rem] font-medium text-[#c5a059] uppercase tracking-[0.25em] whitespace-nowrap">
                                     Laundry Concierge
                                 </span>
-                                <span class="h-px w-10 bg-gradient-to-l from-transparent to-[#c5a059]"></span>
+                                <span class="h-px w-8 bg-white/10 group-hover:bg-[#c5a059]/50 transition-colors"></span>
                             </div>
                         </a>
                     </div>
 
-                    <!-- Mobile Right: Schedule Icon -->
-                    <a href="#schedule" class="md:hidden z-20 w-10 h-10 flex items-center justify-center rounded-full bg-[#c5a059] text-[#020617] hover:bg-white transition-all shadow-lg shadow-[#c5a059]/20" aria-label="Schedule a pickup">
-                        <i data-lucide="calendar-plus" class="w-4 h-4"></i>
+                    <!-- Mobile Right: Text Icon (Balanced Layout) -->
+                    <a href="sms:+16094310538" class="md:hidden z-20 text-white hover:text-[#c5a059] transition-colors p-2" aria-label="Text message to request service">
+                        <i data-lucide="message-square" class="w-6 h-6"></i>
                     </a>
 
                     <!-- Desktop Right Action -->
                     <div class="hidden md:flex justify-end items-center w-1/3">
-                        <a href="#schedule" class="group relative flex items-center justify-center gap-2 text-xs font-bold text-[#020617] bg-gradient-to-r from-[#c5a059] to-[#d4b475] px-8 py-3.5 rounded-sm hover:from-white hover:to-white transition-all uppercase tracking-[0.2em] overflow-hidden">
-                            <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
-                            <i data-lucide="calendar-plus" class="w-4 h-4 relative z-10"></i>
-                            <span class="relative z-10">Schedule Pickup</span>
+                        <a href="tel:+16094310538" class="flex items-center gap-2 text-xs font-bold text-[#020617] bg-[#c5a059] px-6 py-3 rounded hover:bg-white transition-all uppercase tracking-widest shadow-[0_0_15px_rgba(197,160,89,0.2)]">
+                            <i data-lucide="phone" class="w-3 h-3"></i>
+                            <span>Request: (609) 431-0538</span>
                         </a>
                     </div>
                 </div>
@@ -156,36 +147,30 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-[100svh] flex items-center justify-center pt-36 md:pt-44 pb-20 overflow-hidden">
+    <section class="relative min-h-screen flex items-center justify-center pt-36 md:pt-44 overflow-hidden">
         <!-- Background Image -->
         <div class="absolute inset-0 z-0">
-            <img src="https://zgnpmogdjnnhpwewavnr.supabase.co/storage/v1/object/public/project-images/9ffe658b-8f8c-4b8f-be7b-273eadefa75c/1772549543171-wpu1hk.jpeg" alt="Luxury Laundry Service in Atlantic City" class="w-full h-full object-cover opacity-30 scale-105 transform origin-center animate-[pulse_20s_ease-in-out_infinite]">
-            <div class="absolute inset-0 bg-gradient-to-b from-[#020617] via-[#020617]/70 to-[#020617]"></div>
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(197,160,89,0.08)_0%,transparent_60%)]"></div>
+            <img src="https://zgnpmogdjnnhpwewavnr.supabase.co/storage/v1/object/public/project-images/9ffe658b-8f8c-4b8f-be7b-273eadefa75c/1772549543171-wpu1hk.jpeg" alt="Luxury Laundry" class="w-full h-full object-cover opacity-40 scale-105">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#020617]/90 via-[#020617]/50 to-[#020617]"></div>
         </div>
 
         <div class="relative z-10 max-w-5xl mx-auto px-6 text-center animate-on-scroll">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#c5a059]/30 bg-[#c5a059]/10 backdrop-blur-md mb-8">
-                <span class="w-2 h-2 rounded-full bg-[#c5a059] animate-pulse"></span>
-                <span class="text-[#c5a059] text-xs font-bold uppercase tracking-widest">Now Serving Atlantic City</span>
-            </div>
             
-            <h1 class="text-5xl sm:text-6xl md:text-8xl font-bold text-white leading-[1.1] mb-8 serif-font tracking-tight">
-                Atlantic City's Premier<br>
-                <span class="text-gradient inline-block mt-2">Laundry Concierge</span>
+            <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-8 serif-font tracking-tighter">
+                Atlantic City's Premier
+                <span class="text-[#c5a059] block mt-1 sm:mt-2">Laundry Concierge</span>
             </h1>
             
-            <p class="text-lg md:text-2xl text-slate-300 leading-relaxed mb-12 max-w-3xl mx-auto font-light">
-                Meticulous wash and fold service with reliable pickup and prompt return. Schedule your service in under 60 seconds.
+            <p class="text-lg md:text-xl text-slate-300 leading-relaxed mb-12 max-w-3xl mx-auto font-light">
+                Refined laundry service without the inconvenience. We deliver meticulous wash, dry, and fold care with reliable pickup and prompt return — tailored to the pace of Atlantic City living.
             </p>
             
-            <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
-                <a href="#schedule" class="group relative inline-flex justify-center items-center px-10 py-4 bg-[#c5a059] text-[#020617] font-bold rounded-sm hover:bg-white transition-all text-sm uppercase tracking-[0.2em] shadow-[0_0_30px_rgba(197,160,89,0.3)] overflow-hidden">
-                    <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
-                    <i data-lucide="calendar-plus" class="w-4 h-4 mr-2 relative z-10"></i>
-                    <span class="relative z-10">Book Now</span>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="sms:+16094310538" class="inline-flex justify-center items-center px-10 py-4 bg-[#c5a059] text-[#020617] font-bold rounded hover:bg-white transition-all text-xs uppercase tracking-widest shadow-[0_0_20px_rgba(197,160,89,0.3)]">
+                    <i data-lucide="message-square" class="w-4 h-4 mr-2"></i>
+                    Text to Request Pick Up
                 </a>
-                <a href="#process" class="inline-flex justify-center items-center px-10 py-4 bg-transparent border border-white/20 text-white font-bold rounded-sm hover:border-[#c5a059] hover:bg-[#c5a059]/10 transition-all text-sm uppercase tracking-[0.2em]">
+                <a href="#process" class="inline-flex justify-center items-center px-10 py-4 bg-transparent border border-slate-600 text-white font-bold rounded hover:border-white hover:bg-white/5 transition-all text-xs uppercase tracking-widest">
                     How It Works
                 </a>
             </div>
@@ -193,150 +178,219 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-32 bg-[#020617] relative border-t border-white/5">
-        <div class="absolute top-0 right-0 w-1/2 h-full bg-[radial-gradient(ellipse_at_top_right,rgba(197,160,89,0.05)_0%,transparent_70%)] pointer-events-none"></div>
+    <section id="services" class="py-32 bg-[#020617] relative">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-[#c5a059]/5 blur-[100px] pointer-events-none"></div>
         
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="text-center mb-20 animate-on-scroll">
-                <div class="flex items-center justify-center gap-4 mb-4">
-                    <span class="h-px w-12 bg-[#c5a059]/50"></span>
-                    <h2 class="text-xs font-bold text-[#c5a059] tracking-[0.3em] uppercase">What We Offer</h2>
-                    <span class="h-px w-12 bg-[#c5a059]/50"></span>
-                </div>
-                <h3 class="text-4xl md:text-6xl font-bold text-white serif-font mb-8">Executive Services</h3>
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-xs font-bold text-[#c5a059] tracking-[0.3em] uppercase mb-4">What We Offer</h2>
+                <h3 class="text-4xl md:text-5xl font-bold text-white serif-font mb-6">Atlantic City Laundry Services</h3>
                 
-                <div class="inline-flex items-center gap-3 border border-white/10 bg-white/5 px-6 py-3 rounded-full backdrop-blur-sm animate-on-scroll delay-100">
-                    <i data-lucide="clock" class="w-4 h-4 text-[#c5a059]"></i>
-                    <p class="text-slate-300 text-sm font-medium tracking-wide">
-                        Operating Hours: <span class="text-white font-bold">8:00 AM - 8:00 PM</span>, 7 Days
+                <!-- Important Time Notice -->
+                <div class="inline-block border border-[#c5a059]/30 bg-[#c5a059]/5 px-6 py-3 rounded-full backdrop-blur-sm animate-on-scroll delay-100">
+                    <p class="text-slate-300 text-sm md:text-base font-medium">
+                        <i data-lucide="clock" class="inline w-4 h-4 mr-2 text-[#c5a059] relative -top-px"></i>
+                        Operating Hours: <span class="text-white font-bold">7:00 AM - 11:00 PM</span>, 7 days a week.
                     </p>
                 </div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
+            <!-- 2 Column Grid for Side-by-Side Premium Options -->
+            <div class="grid md:grid-cols-2 gap-6">
                 
-                <!-- Super Rush -->
-                <div class="hover-lift relative overflow-hidden rounded-2xl border border-[#c5a059]/50 bg-gradient-to-br from-[#c5a059]/10 to-transparent p-10 animate-on-scroll group">
-                    <div class="absolute top-6 right-6 bg-[#c5a059] text-[#020617] text-[10px] font-bold px-4 py-1.5 uppercase tracking-[0.2em] rounded-sm">High Roller</div>
-                    <div class="w-14 h-14 rounded-full bg-[#c5a059]/20 flex items-center justify-center mb-6 border border-[#c5a059]/30 group-hover:scale-110 transition-transform duration-500">
-                        <i data-lucide="zap" class="w-6 h-6 text-[#c5a059]"></i>
+                <!-- Service Item 1: Super Rush (High Roller) -->
+                <div class="group relative overflow-hidden rounded-xl border border-[#c5a059] bg-[#c5a059]/10 p-8 transition-all hover:bg-[#c5a059]/15 animate-on-scroll shadow-[0_0_30px_rgba(197,160,89,0.1)]">
+                    <div class="absolute top-0 right-0 bg-[#c5a059] text-[#020617] text-[10px] font-bold px-4 py-1 uppercase tracking-widest rounded-bl-lg">High Roller</div>
+                    <div class="flex flex-col h-full justify-between gap-6">
+                        <div class="flex items-start gap-4">
+                            <span class="text-4xl font-serif text-[#c5a059] font-bold">01</span>
+                            <div>
+                                <h4 class="text-2xl font-bold text-white serif-font mb-2">Super Rush</h4>
+                                <p class="text-slate-300 text-sm leading-relaxed">
+                                    <strong>Immediate Attention:</strong> Picked up ASAP and processed immediately. No waiting in batches.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="space-y-4 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="zap" class="w-5 h-5 text-[#c5a059] fill-[#c5a059] shrink-0 mt-1"></i>
+                                    <div>
+                                        <span class="block text-xl font-bold text-white">Strict 4-Hour Turnaround</span>
+                                        <span class="text-xs text-[#c5a059] uppercase tracking-wider font-bold">Washed, Dried & Folded ASAP</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-slate-400 shrink-0 mt-1"></i>
+                                    <span class="text-sm text-slate-300 leading-snug">Priority status: Your order skips the processing queue.</span>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="alert-circle" class="w-5 h-5 text-slate-400 shrink-0 mt-1"></i>
+                                    <span class="text-sm text-slate-300 leading-snug">Premium pricing applies for immediate service.</span>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="clock" class="w-5 h-5 text-slate-400 shrink-0 mt-1"></i>
+                                    <span class="text-sm text-slate-300 leading-snug">Super Rush available until 12:00 PM. Later requests may be subject to additional fees.</span>
+                                </div>
+                            </div>
+                            <div class="pt-4 border-t border-[#c5a059]/20">
+                                <a href="sms:+16094310538" class="inline-flex w-full justify-center items-center gap-2 px-6 py-3 bg-[#c5a059] text-[#020617] text-xs font-bold uppercase tracking-widest rounded hover:bg-white transition-colors">
+                                    Request Super Rush
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <h4 class="text-3xl font-bold text-white serif-font mb-4">Super Rush</h4>
-                    <p class="text-slate-300 text-base leading-relaxed mb-8 font-light">
-                        <strong class="text-white font-medium">4-Hour Turnaround.</strong> Picked up ASAP and processed immediately. Your order skips the queue for ultimate priority.
-                    </p>
-                    <a href="#schedule" class="inline-flex w-full justify-center items-center gap-2 px-6 py-4 bg-[#c5a059] text-[#020617] text-xs font-bold uppercase tracking-[0.2em] rounded-sm hover:bg-white transition-colors">
-                        Select Super Rush
-                    </a>
                 </div>
 
-                <!-- Rush -->
-                <div class="hover-lift relative overflow-hidden rounded-2xl border border-white/10 bg-[#0f172a]/50 p-10 animate-on-scroll delay-100 group">
-                    <div class="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mb-6 border border-white/10 group-hover:border-[#c5a059]/50 transition-colors duration-500">
-                        <i data-lucide="timer" class="w-6 h-6 text-white group-hover:text-[#c5a059] transition-colors"></i>
+                <!-- Service Item 2: Rush -->
+                <div class="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-8 transition-all hover:border-[#c5a059]/30 hover:bg-white/10 animate-on-scroll delay-100">
+                    <div class="flex flex-col h-full justify-between gap-6">
+                        <div class="flex items-start gap-4">
+                            <span class="text-4xl font-serif text-[#c5a059]/40 font-bold group-hover:text-[#c5a059] transition-colors">02</span>
+                            <div>
+                                <h4 class="text-2xl font-bold text-white serif-font mb-2">Rush</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">
+                                    <strong>Expedited Service:</strong> Picked up ASAP, then enters our 4-hour processing cycle.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="space-y-4 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="clock" class="w-5 h-5 text-slate-300 shrink-0 mt-1"></i>
+                                    <div>
+                                        <span class="block text-xl font-bold text-white">Same Day Delivery</span>
+                                        <span class="text-xs text-slate-400 uppercase tracking-wider font-bold">Processed in 4-Hour Batches</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="info" class="w-5 h-5 text-slate-400 shrink-0 mt-1"></i>
+                                    <span class="text-sm text-slate-300 leading-snug">Immediate pickup, but processing wait times may vary.</span>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="scale" class="w-5 h-5 text-slate-400 shrink-0 mt-1"></i>
+                                    <span class="text-sm text-slate-300 leading-snug">Delivered within 8 hours max. Order by 2:00 PM.</span>
+                                </div>
+                            </div>
+                            <div class="pt-4 border-t border-white/10">
+                                <a href="sms:+16094310538" class="inline-flex w-full justify-center items-center gap-2 px-6 py-3 border border-white/20 text-white text-xs font-bold uppercase tracking-widest rounded hover:bg-white hover:text-[#020617] transition-all">
+                                    Request Rush
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <h4 class="text-3xl font-bold text-white serif-font mb-4">Rush</h4>
-                    <p class="text-slate-400 text-base leading-relaxed mb-8 font-light">
-                        <strong class="text-white font-medium">Same Day Delivery.</strong> Picked up ASAP and delivered within 8 hours. (Must order by 2:00 PM).
-                    </p>
-                    <a href="#schedule" class="inline-flex w-full justify-center items-center gap-2 px-6 py-4 border border-white/20 text-white text-xs font-bold uppercase tracking-[0.2em] rounded-sm hover:border-[#c5a059] hover:bg-[#c5a059]/10 transition-all">
-                        Select Rush
-                    </a>
                 </div>
 
-                <!-- Standard -->
-                <div class="hover-lift relative overflow-hidden rounded-2xl border border-white/10 bg-[#0f172a]/50 p-10 animate-on-scroll delay-200 group">
-                    <div class="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mb-6 border border-white/10 group-hover:border-[#c5a059]/50 transition-colors duration-500">
-                        <i data-lucide="shirt" class="w-6 h-6 text-white group-hover:text-[#c5a059] transition-colors"></i>
+                <!-- Service Item 3: Standard -->
+                <div class="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-8 transition-all hover:border-[#c5a059]/30 hover:bg-white/10 animate-on-scroll delay-200">
+                    <div class="flex flex-col h-full justify-between gap-6">
+                        <div class="flex items-start gap-4">
+                            <span class="text-4xl font-serif text-[#c5a059]/20 font-bold group-hover:text-[#c5a059] transition-colors">03</span>
+                            <div>
+                                <h4 class="text-2xl font-bold text-white serif-font mb-2">Standard</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">
+                                    Our signature service with reliable next-day return.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="space-y-4 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="calendar" class="w-5 h-5 text-slate-400 shrink-0 mt-1"></i>
+                                    <span class="text-xl font-bold text-white">Next Day Delivery</span>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="scale" class="w-5 h-5 text-slate-400 shrink-0 mt-1"></i>
+                                    <span class="text-sm text-slate-300 leading-snug">30lb Minimum Weight Requirement.</span>
+                                </div>
+                            </div>
+                            <div class="pt-4 border-t border-white/10">
+                                <a href="sms:+16094310538" class="text-xs font-bold text-[#c5a059] uppercase tracking-widest hover:text-white transition-colors">
+                                    Request Rates &rarr;
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <h4 class="text-3xl font-bold text-white serif-font mb-4">Standard</h4>
-                    <p class="text-slate-400 text-base leading-relaxed mb-8 font-light">
-                        Our signature wash and fold service with reliable next-day return. Premium care for your everyday garments. (30lb minimum).
-                    </p>
-                    <a href="#schedule" class="inline-flex items-center text-xs font-bold text-[#c5a059] uppercase tracking-[0.2em] hover:text-white transition-colors group-hover:translate-x-2 duration-300">
-                        Select Standard <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
-                    </a>
                 </div>
 
-                <!-- Commercial -->
-                <div class="hover-lift relative overflow-hidden rounded-2xl border border-white/10 bg-[#0f172a]/50 p-10 animate-on-scroll delay-300 group">
-                    <div class="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mb-6 border border-white/10 group-hover:border-[#c5a059]/50 transition-colors duration-500">
-                        <i data-lucide="building-2" class="w-6 h-6 text-white group-hover:text-[#c5a059] transition-colors"></i>
+                <!-- Service Item 4: Commercial & Residential -->
+                <div class="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-8 transition-all hover:border-[#c5a059]/30 hover:bg-white/10 animate-on-scroll delay-300">
+                    <div class="flex flex-col h-full justify-between gap-6">
+                        <div class="flex items-start gap-4">
+                            <span class="text-4xl font-serif text-[#c5a059]/20 font-bold group-hover:text-[#c5a059] transition-colors">04</span>
+                            <div>
+                                <h4 class="text-2xl font-bold text-white serif-font mb-2">Commercial & Residential</h4>
+                                <p class="text-slate-400 text-sm leading-relaxed">
+                                    Volume logistics for Atlantic City hotels, spas, Airbnbs, and residential towers. Linen management.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-slate-400"></i>
+                                <span class="text-xl font-bold text-white">Contract Pricing</span>
+                            </div>
+                            <div class="pt-4 border-t border-white/10">
+                                <a href="#contact" class="text-xs font-bold text-[#c5a059] uppercase tracking-widest hover:text-white transition-colors">
+                                    Contact Us &rarr;
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <h4 class="text-3xl font-bold text-white serif-font mb-4">Commercial Logistics</h4>
-                    <p class="text-slate-400 text-base leading-relaxed mb-8 font-light">
-                        Volume logistics and dedicated service for hotels, spas, and Airbnbs. Custom contract pricing available upon request.
-                    </p>
-                    <a href="#schedule" class="inline-flex items-center text-xs font-bold text-[#c5a059] uppercase tracking-[0.2em] hover:text-white transition-colors group-hover:translate-x-2 duration-300">
-                        Request Quote <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
-                    </a>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- Process Section -->
-    <section id="process" class="py-32 bg-[#070b14] border-y border-white/5 relative overflow-hidden">
-        <!-- Subtle background pattern -->
-        <div class="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#c5a059_1px,transparent_1px)] [background-size:20px_20px]"></div>
-
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="text-center mb-20 animate-on-scroll">
-                <div class="flex items-center justify-center gap-4 mb-4">
-                    <span class="h-px w-12 bg-[#c5a059]/50"></span>
-                    <h2 class="text-xs font-bold text-[#c5a059] tracking-[0.3em] uppercase">The Workflow</h2>
-                    <span class="h-px w-12 bg-[#c5a059]/50"></span>
+    <section id="process" class="py-32 bg-[#050b1d] border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-16">
+                <div class="animate-on-scroll">
+                    <h2 class="text-xs font-bold text-[#c5a059] tracking-[0.3em] uppercase mb-4">The Workflow</h2>
+                    <h3 class="text-4xl font-bold text-white serif-font mb-6">Effortless Logistics in Atlantic City</h3>
+                    <p class="text-slate-400 font-light text-lg">We've simplified the process to a single interaction. No apps to download, no accounts to create.</p>
                 </div>
-                <h3 class="text-4xl md:text-5xl font-bold text-white serif-font mb-6">Effortless Logistics</h3>
-                <p class="text-slate-400 font-light text-lg max-w-2xl mx-auto">We've simplified our service to a single form. No apps to download, no accounts to create. Just seamless pickup and delivery.</p>
+                <div class="flex justify-start lg:justify-end animate-on-scroll">
+                    <a href="sms:+16094310538" class="flex items-center space-x-2 text-white hover:text-[#c5a059] transition-colors">
+                        <span class="text-sm font-bold uppercase tracking-widest">Start Request</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
             </div>
 
-            <div class="grid md:grid-cols-4 gap-8 relative">
-                <!-- Connecting Line for Desktop -->
-                <div class="hidden md:block absolute top-16 left-10 right-10 h-px bg-gradient-to-r from-transparent via-[#c5a059]/30 to-transparent z-0"></div>
-
-                <div class="relative pt-12 group animate-on-scroll">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 w-12 h-12 rounded-full bg-[#020617] border border-[#c5a059]/30 flex items-center justify-center text-[#c5a059] font-bold font-serif z-10 group-hover:bg-[#c5a059] group-hover:text-[#020617] transition-colors duration-300">1</div>
-                    <div class="text-center md:text-left mt-6">
-                        <div class="w-16 h-16 mx-auto md:mx-0 rounded-2xl bg-white/5 flex items-center justify-center mb-6 group-hover:-translate-y-2 transition-transform duration-300">
-                            <i data-lucide="calendar-check" class="w-8 h-8 text-white"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-white serif-font mb-3">Book Online</h4>
-                        <p class="text-sm text-slate-400 leading-relaxed font-light">Fill out our simple Jotform below with your location. It takes less than 60 seconds.</p>
-                    </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="relative pt-8 border-t border-white/10 hover:border-[#c5a059] transition-colors duration-500 group animate-on-scroll">
+                    <span class="absolute -top-3 left-0 bg-[#050b1d] pr-4 text-sm font-bold text-slate-500 group-hover:text-[#c5a059]">01</span>
+                    <i data-lucide="message-square" class="w-8 h-8 text-white mb-6"></i>
+                    <h4 class="text-xl font-bold text-white serif-font mb-3">Text or Call</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">When requesting a pickup, text your service type (Super Rush, Rush, or Standard), your location, & pickup time to <span class="text-white font-medium">(609) 431-0538</span>. The driver will arrive within an hour.</p>
                 </div>
 
-                <div class="relative pt-12 group animate-on-scroll delay-100">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 w-12 h-12 rounded-full bg-[#020617] border border-[#c5a059]/30 flex items-center justify-center text-[#c5a059] font-bold font-serif z-10 group-hover:bg-[#c5a059] group-hover:text-[#020617] transition-colors duration-300">2</div>
-                    <div class="text-center md:text-left mt-6">
-                        <div class="w-16 h-16 mx-auto md:mx-0 rounded-2xl bg-white/5 flex items-center justify-center mb-6 group-hover:-translate-y-2 transition-transform duration-300">
-                            <i data-lucide="shopping-bag" class="w-8 h-8 text-white"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-white serif-font mb-3">Prepare</h4>
-                        <p class="text-sm text-slate-400 leading-relaxed font-light">Have laundry ready. Meet our driver directly in the lobby or valet area. (Do not leave with bell hop).</p>
-                    </div>
+                <!-- Step 2 -->
+                <div class="relative pt-8 border-t border-white/10 hover:border-[#c5a059] transition-colors duration-500 group animate-on-scroll delay-100">
+                    <span class="absolute -top-3 left-0 bg-[#050b1d] pr-4 text-sm font-bold text-slate-500 group-hover:text-[#c5a059]">02</span>
+                    <i data-lucide="shopping-bag" class="w-8 h-8 text-white mb-6"></i>
+                    <h4 class="text-xl font-bold text-white serif-font mb-3">Prepare for Pickup</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">Please have laundry ready in your own bags (no baskets or hampers). Meet the driver directly for pickup and do not leave bags with the bell hop unless specifically instructed.</p>
                 </div>
 
-                <div class="relative pt-12 group animate-on-scroll delay-200">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 w-12 h-12 rounded-full bg-[#020617] border border-[#c5a059]/30 flex items-center justify-center text-[#c5a059] font-bold font-serif z-10 group-hover:bg-[#c5a059] group-hover:text-[#020617] transition-colors duration-300">3</div>
-                    <div class="text-center md:text-left mt-6">
-                        <div class="w-16 h-16 mx-auto md:mx-0 rounded-2xl bg-white/5 flex items-center justify-center mb-6 group-hover:-translate-y-2 transition-transform duration-300">
-                            <i data-lucide="droplets" class="w-8 h-8 text-white"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-white serif-font mb-3">Premium Care</h4>
-                        <p class="text-sm text-slate-400 leading-relaxed font-light">Professional washing with high-quality detergents and expert folding by our dedicated team.</p>
-                    </div>
+                <!-- Step 3 -->
+                <div class="relative pt-8 border-t border-white/10 hover:border-[#c5a059] transition-colors duration-500 group animate-on-scroll delay-200">
+                    <span class="absolute -top-3 left-0 bg-[#050b1d] pr-4 text-sm font-bold text-slate-500 group-hover:text-[#c5a059]">03</span>
+                    <i data-lucide="droplets" class="w-8 h-8 text-white mb-6"></i>
+                    <h4 class="text-xl font-bold text-white serif-font mb-3">Premium Care</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">Professional washing with high-quality, eco-friendly detergents and expert folding.</p>
                 </div>
 
-                <div class="relative pt-12 group animate-on-scroll delay-300">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 w-12 h-12 rounded-full bg-[#020617] border border-[#c5a059]/30 flex items-center justify-center text-[#c5a059] font-bold font-serif z-10 group-hover:bg-[#c5a059] group-hover:text-[#020617] transition-colors duration-300">4</div>
-                    <div class="text-center md:text-left mt-6">
-                        <div class="w-16 h-16 mx-auto md:mx-0 rounded-2xl bg-white/5 flex items-center justify-center mb-6 group-hover:-translate-y-2 transition-transform duration-300">
-                            <i data-lucide="sparkles" class="w-8 h-8 text-white"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-white serif-font mb-3">Prompt Return</h4>
-                        <p class="text-sm text-slate-400 leading-relaxed font-light">We'll text you when we're on the way. Your fresh laundry is returned personally in the lobby/valet.</p>
-                    </div>
+                <!-- Step 4 -->
+                <div class="relative pt-8 border-t border-white/10 hover:border-[#c5a059] transition-colors duration-500 group animate-on-scroll delay-300">
+                    <span class="absolute -top-3 left-0 bg-[#050b1d] pr-4 text-sm font-bold text-slate-500 group-hover:text-[#c5a059]">04</span>
+                    <i data-lucide="check-circle" class="w-8 h-8 text-white mb-6"></i>
+                    <h4 class="text-xl font-bold text-white serif-font mb-3">Prompt Return</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">Meet the driver down in the lobby for drop-off. Please do not expect the bell hop or front desk to be responsible for your clothes unless arranged.</p>
                 </div>
             </div>
         </div>
@@ -344,42 +398,32 @@
 
     <!-- About Section -->
     <section id="about" class="py-32 bg-[#020617] overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="relative grid lg:grid-cols-2 gap-16 items-center">
-                <div class="relative z-10 animate-on-scroll order-2 lg:order-1">
-                    <div class="relative h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-[#020617]/80 to-transparent z-10"></div>
-                        <img src="https://zgnpmogdjnnhpwewavnr.supabase.co/storage/v1/object/public/project-images/9ffe658b-8f8c-4b8f-be7b-273eadefa75c/09f008cd-6724-4253-a23b-c6a32eab49bd.png" alt="Atlantic City Casino Lifestyle" class="w-full h-full object-cover grayscale opacity-70 hover:scale-105 hover:grayscale-0 transition-all duration-700">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="relative grid md:grid-cols-2 gap-12 items-center">
+                <!-- Image Side -->
+                <div class="relative z-10 animate-on-scroll">
+                    <div class="relative h-[600px] w-full rounded-lg overflow-hidden">
+                        <div class="absolute inset-0 bg-[#c5a059]/10 mix-blend-overlay z-10"></div>
+                        <img src="https://zgnpmogdjnnhpwewavnr.supabase.co/storage/v1/object/public/project-images/9ffe658b-8f8c-4b8f-be7b-273eadefa75c/09f008cd-6724-4253-a23b-c6a32eab49bd.png" alt="Atlantic City Lifestyle" class="w-full h-full object-cover grayscale opacity-80">
                     </div>
-                    <!-- Decorative Element -->
-                    <div class="absolute -bottom-8 -left-8 w-3/4 h-3/4 border-l-2 border-b-2 border-[#c5a059]/30 rounded-bl-3xl -z-10 hidden md:block"></div>
+                    <!-- Decorative Border -->
+                    <div class="absolute -bottom-6 -left-6 w-full h-full border border-[#c5a059]/30 -z-10 rounded-lg"></div>
                 </div>
 
-                <div class="lg:-ml-12 z-20 animate-on-scroll delay-100 order-1 lg:order-2">
-                    <div class="glass-panel p-10 md:p-16 rounded-2xl relative overflow-hidden">
-                        <!-- Glow effect behind text -->
-                        <div class="absolute top-0 right-0 w-64 h-64 bg-[#c5a059]/10 blur-[80px] rounded-full"></div>
-                        
-                        <h2 class="text-xs font-bold text-[#c5a059] tracking-[0.3em] uppercase mb-6 relative z-10">Stay at the casino</h2>
-                        <h3 class="text-4xl md:text-5xl font-bold text-white serif-font mb-8 leading-tight relative z-10">More Than Laundry. <br><span class="text-gradient">We Sell Time.</span></h3>
-                        
-                        <div class="space-y-6 text-slate-300 text-lg font-light leading-relaxed relative z-10">
-                            <p>
-                                In a city that never sleeps, time is your most valuable currency. Whether you're managing a casino floor, visiting for a conference, or enjoying a weekend getaway, wash and fold laundry is a distraction you shouldn't have to manage.
-                            </p>
-                            <p class="text-base text-slate-400">
-                                Our team is vetted, professional, and understands the unique security and logistical requirements of Atlantic City's major resorts and residential towers. We operate with discretion and precision.
-                            </p>
-                        </div>
-                        
-                        <div class="mt-10 flex items-center space-x-6 relative z-10">
-                            <div class="w-12 h-12 rounded-full border border-[#c5a059] flex items-center justify-center">
-                                <i data-lucide="shield-check" class="w-5 h-5 text-[#c5a059]"></i>
-                            </div>
-                            <div>
-                                <div class="text-white font-bold tracking-wider uppercase text-sm">Trusted Partner</div>
-                                <div class="serif-font text-[#c5a059] italic">Est. 2023</div>
-                            </div>
+                <!-- Text Side -->
+                <div class="md:-ml-20 z-20 animate-on-scroll delay-100">
+                    <div class="glass-panel p-10 md:p-14 rounded-xl shadow-2xl">
+                        <h2 class="text-xs font-bold text-[#c5a059] tracking-[0.3em] uppercase mb-6">Stay at the casino</h2>
+                        <h3 class="text-3xl md:text-4xl font-bold text-white serif-font mb-6">More Than Just Laundry. <br>We Sell Time.</h3>
+                        <p class="text-slate-300 text-lg mb-6 font-light leading-relaxed">
+                            In Atlantic City, a city that never sleeps, time is your most valuable currency. Whether you are managing a casino floor, visiting for a conference, or enjoying a weekend getaway, laundry is a distraction you shouldn't have to manage.
+                        </p>
+                        <p class="text-slate-400 text-sm mb-8 leading-relaxed">
+                            We bring a "white glove" approach to an everyday necessity. Our team is vetted, professional, and understands the unique security and logistical requirements of Atlantic City's major resorts and residential towers.
+                        </p>
+                        <div class="flex items-center space-x-4">
+                            <div class="h-px flex-1 bg-white/20"></div>
+                            <span class="serif-font text-[#c5a059] italic text-xl">Est. 2023</span>
                         </div>
                     </div>
                 </div>
@@ -387,146 +431,166 @@
         </div>
     </section>
 
-    <!-- Schedule/Contact Section (JOTFORM) -->
-    <section id="schedule" class="py-32 bg-gradient-to-b from-[#020617] via-[#070b14] to-[#020617] relative border-t border-white/5">
-        <!-- Abstract Background -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <div class="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-[#c5a059]/5 blur-[120px]"></div>
-            <div class="absolute top-[40%] -right-[10%] w-[40%] h-[60%] rounded-full bg-[#c5a059]/5 blur-[120px]"></div>
-        </div>
-
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 bg-gradient-to-b from-[#020617] to-[#050b1d] relative">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="mb-16 text-center animate-on-scroll">
-                <div class="flex items-center justify-center gap-4 mb-4">
-                    <span class="h-px w-12 bg-[#c5a059]/50"></span>
-                    <h2 class="text-xs font-bold text-[#c5a059] tracking-[0.3em] uppercase">Instant Booking</h2>
-                    <span class="h-px w-12 bg-[#c5a059]/50"></span>
-                </div>
-                <h3 class="text-5xl md:text-6xl font-bold text-white serif-font mb-6">Schedule Your Pickup</h3>
+                <h2 class="text-xs font-bold text-[#c5a059] tracking-[0.3em] uppercase mb-4">Concierge Desk</h2>
+                <h3 class="text-5xl font-bold text-white serif-font mb-6">Direct Access</h3>
                 <p class="text-slate-400 font-light max-w-2xl mx-auto text-lg">
-                    Complete the secure form below to schedule your service. Our concierge team will confirm your request immediately.
+                    Select the appropriate line for your Atlantic City laundry needs for the fastest response.
                 </p>
             </div>
-            
-            <div class="grid lg:grid-cols-12 gap-12 items-start">
-                
-                <!-- Jotform Container -->
-                <div class="lg:col-span-8 animate-on-scroll">
-                    <div class="jotform-wrapper p-2 md:p-4">
-                        <!-- Embedded Jotform -->
-                        <script type="text/javascript" src="https://form.jotform.com/jsform/260966709256065"></script>
+
+            <div class="grid lg:grid-cols-3 gap-6">
+                <!-- Option 1: Urgent / Mobile / Booking -->
+                <div class="glass-panel p-8 rounded-2xl hover-lift group relative overflow-hidden animate-on-scroll h-full flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i data-lucide="zap" class="w-32 h-32 text-white"></i>
+                    </div>
+                    
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 rounded-full bg-[#c5a059] flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(197,160,89,0.4)]">
+                            <i data-lucide="smartphone" class="w-7 h-7 text-[#020617]"></i>
+                        </div>
+                        
+                        <h4 class="text-xl font-bold text-white serif-font mb-3">Concierge</h4>
+                        <p class="text-slate-400 mb-6 leading-relaxed text-sm">
+                            For new pick up request, Super Rush (As soon as possible within 4 hours), and Rush Request (4 hours-8 hours).
+                            <br>
+                            <span class="text-white font-medium">Available 7 Days a Week in Atlantic City.</span>
+                        </p>
+                        
+                        <div class="mb-6">
+                            <p class="text-xs text-[#c5a059] uppercase tracking-widest mb-1">Direct Line</p>
+                            <p class="text-2xl font-serif text-white font-bold">(609) 431-0538</p>
+                        </div>
+
+                        <div class="flex flex-col xl:flex-row gap-3">
+                            <a href="sms:+16094310538" class="flex-1 inline-flex justify-center items-center px-4 py-4 bg-[#c5a059] text-[#020617] font-bold rounded hover:bg-white transition-all text-xs uppercase tracking-widest">
+                                <i data-lucide="message-square" class="w-4 h-4 mr-2"></i>
+                                Text Now
+                            </a>
+                            <a href="tel:+16094310538" class="flex-1 inline-flex justify-center items-center px-4 py-4 border border-white/20 hover:border-[#c5a059] text-white hover:text-[#c5a059] font-bold rounded transition-all text-xs uppercase tracking-widest">
+                                <i data-lucide="phone-call" class="w-4 h-4 mr-2"></i>
+                                Call
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Info Panel -->
-                <div class="lg:col-span-4 space-y-8 animate-on-scroll delay-100 lg:sticky lg:top-32">
+                <!-- Option 2: Customer Service -->
+                <div class="glass-panel p-8 rounded-2xl hover-lift group relative overflow-hidden animate-on-scroll delay-100 h-full flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i data-lucide="headset" class="w-32 h-32 text-white"></i>
+                    </div>
                     
-                    <!-- Steps Box -->
-                    <div class="glass-panel p-8 rounded-2xl">
-                        <div class="flex items-center gap-4 mb-6 pb-6 border-b border-white/10">
-                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[#c5a059] to-[#9a7b40] flex items-center justify-center shadow-lg shadow-[#c5a059]/20">
-                                <i data-lucide="bell-ring" class="w-5 h-5 text-[#020617]"></i>
-                            </div>
-                            <h4 class="text-2xl serif-font font-bold text-white">What Happens Next?</h4>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-6">
+                            <i data-lucide="life-buoy" class="w-7 h-7 text-[#c5a059]"></i>
                         </div>
-                        <ul class="space-y-6 text-slate-300 text-sm font-light">
-                            <li class="flex items-start gap-4">
-                                <div class="w-6 h-6 rounded-full border border-[#c5a059]/50 flex items-center justify-center shrink-0 mt-0.5">
-                                    <i data-lucide="check" class="w-3 h-3 text-[#c5a059]"></i>
-                                </div>
-                                <span>You will receive an <strong class="text-white font-medium">SMS confirmation</strong> with your pickup details.</span>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div class="w-6 h-6 rounded-full border border-[#c5a059]/50 flex items-center justify-center shrink-0 mt-0.5">
-                                    <i data-lucide="check" class="w-3 h-3 text-[#c5a059]"></i>
-                                </div>
-                                <span>Please <strong class="text-white font-medium">meet our driver in the lobby/valet area</strong> at the scheduled time.</span>
-                            </li>
-                             <li class="flex items-start gap-4">
-                                <div class="w-6 h-6 rounded-full border border-[#c5a059]/50 flex items-center justify-center shrink-0 mt-0.5">
-                                    <i data-lucide="check" class="w-3 h-3 text-[#c5a059]"></i>
-                                </div>
-                                <span>We will text you again when your order is complete and ready for drop-off.</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Contact Box -->
-                    <div class="border border-white/10 rounded-2xl p-8 bg-[#0f172a]/30 backdrop-blur-sm relative overflow-hidden group hover:border-[#c5a059]/30 transition-colors">
-                        <div class="absolute -right-4 -top-4 w-24 h-24 bg-[#c5a059]/5 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
-                        <div class="flex items-center gap-4 mb-4 relative z-10">
-                             <div class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
-                                <i data-lucide="phone-call" class="w-4 h-4 text-[#c5a059]"></i>
-                            </div>
-                            <h4 class="text-xl serif-font font-bold text-white">Urgent Request?</h4>
-                        </div>
-                        <p class="text-slate-400 text-sm mb-6 font-light relative z-10">
-                            For immediate assistance or questions about your wash and fold order, please call our concierge line.
+                        
+                        <h4 class="text-xl font-bold text-white serif-font mb-3">Customer Service</h4>
+                        <p class="text-slate-400 mb-6 leading-relaxed text-sm">
+                            For existing orders, billing inquiries, or general questions.
                         </p>
-                        <a href="tel:+16094310538" class="inline-block text-3xl font-serif text-white font-bold hover:text-[#c5a059] transition-colors relative z-10">(609) 431-0538</a>
-                    </div>
+                        
+                        <div class="mb-6">
+                            <p class="text-xs text-[#c5a059] uppercase tracking-widest mb-1">Support Line</p>
+                            <p class="text-2xl font-serif text-white font-bold">(908) 899-2193</p>
+                        </div>
 
+                        <div>
+                            <a href="tel:+19088992193" class="w-full inline-flex justify-center items-center px-6 py-4 border border-white/20 hover:border-[#c5a059] text-white hover:text-[#c5a059] font-bold rounded transition-all text-xs uppercase tracking-widest">
+                                <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+                                Call Support
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Option 3: Email Support -->
+                <div class="glass-panel p-8 rounded-2xl hover-lift group relative overflow-hidden animate-on-scroll delay-200 h-full flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i data-lucide="at-sign" class="w-32 h-32 text-white"></i>
+                    </div>
+                    
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-6">
+                            <i data-lucide="mail" class="w-7 h-7 text-[#c5a059]"></i>
+                        </div>
+                        
+                        <h4 class="text-xl font-bold text-white serif-font mb-3">Email Support</h4>
+                        <p class="text-slate-400 mb-6 leading-relaxed text-sm">
+                            For corporate contracts, Atlantic City hotel partnerships, or general assistance.
+                        </p>
+                        
+                        <div class="mb-6">
+                            <p class="text-xs text-[#c5a059] uppercase tracking-widest mb-1">Support Address</p>
+                            <p class="text-lg font-serif text-white font-bold break-all">support@acpickupwashdryfold.com</p>
+                        </div>
+
+                        <div>
+                            <a href="mailto:support@acpickupwashdryfold.com" class="w-full inline-flex justify-center items-center px-6 py-4 border border-white/20 hover:border-[#c5a059] text-white hover:text-[#c5a059] font-bold rounded transition-all text-xs uppercase tracking-widest">
+                                <i data-lucide="send" class="w-4 h-4 mr-2"></i>
+                                Send Email
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     
     <!-- Footer -->
-    <footer class="bg-[#020617] border-t border-white/10 pt-20 pb-12">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-12 gap-12 mb-16">
-                <div class="md:col-span-5">
-                    <a href="#" class="block mb-8">
-                        <div class="inline-block border-y border-[#c5a059]/50 py-2 px-4 bg-white/5">
-                            <span class="text-2xl font-bold text-white casino-font tracking-[0.2em]">AC WASH DRY FOLD</span>
+    <footer class="bg-[#020617] border-t border-white/5 pt-16 pb-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="#" class="block mb-6">
+                        <div class="inline-block border-y border-[#c5a059] py-1 px-3">
+                            <span class="text-xl font-bold text-white casino-font tracking-widest">AC WASH DRY FOLD</span>
                         </div>
                     </a>
-                    <p class="text-slate-400 text-sm leading-relaxed max-w-sm mb-8 font-light">
-                        Atlantic City's #1 executive laundry concierge. We reclaim your time so you can focus on what matters. Professional, discreet, and prompt.
+                    <p class="text-slate-400 text-sm leading-relaxed max-w-sm mb-6">
+                        Atlantic City's #1 executive laundry concierge. We reclaim your time so you can enjoy Atlantic City.
                     </p>
-                    <div class="flex flex-wrap items-center gap-6">
-                        <a href="https://www.instagram.com/acpickupwashdryfold?igsh=MXF0aTZhNzM1NXJtMw==" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:bg-[#c5a059] hover:text-[#020617] hover:border-[#c5a059] transition-all">
-                            <i data-lucide="instagram" class="w-4 h-4"></i>
-                            <span class="sr-only">Instagram</span>
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-x-8 gap-y-4">
+                        <a href="https://www.instagram.com/acpickupwashdryfold?igsh=MXF0aTZhNzM1NXJtMw==" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-slate-400 hover:text-[#c5a059] transition-colors group">
+                            <i data-lucide="instagram" class="w-5 h-5 text-slate-500 group-hover:text-[#c5a059] transition-colors"></i>
+                            <span class="text-xs font-bold uppercase tracking-widest">Follow on Instagram</span>
                         </a>
-                        <a href="https://www.facebook.com/people/Atlantic-City-Wash-Dry-Fold-Pick-Up-Delivery-Services/61581322154122/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:bg-[#c5a059] hover:text-[#020617] hover:border-[#c5a059] transition-all">
-                            <i data-lucide="facebook" class="w-4 h-4"></i>
-                            <span class="sr-only">Facebook</span>
-                        </a>
-                        <a href="https://www.yelp.ca/biz/ac-pick-up-wash-dry-fold-atlantic-city" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:bg-[#c5a059] hover:text-[#020617] hover:border-[#c5a059] transition-all">
-                            <i data-lucide="star" class="w-4 h-4"></i>
-                            <span class="sr-only">Yelp</span>
+                        <a href="https://www.facebook.com/profile.php?id=61581322154122" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-slate-400 hover:text-[#c5a059] transition-colors group">
+                            <i data-lucide="facebook" class="w-5 h-5 text-slate-500 group-hover:text-[#c5a059] transition-colors"></i>
+                            <span class="text-xs font-bold uppercase tracking-widest">Find us on Facebook</span>
                         </a>
                     </div>
                 </div>
                 
-                <div class="md:col-span-3 md:col-start-7">
-                    <h5 class="text-white font-bold uppercase tracking-[0.2em] text-xs mb-8 flex items-center gap-2">
-                        <span class="w-2 h-px bg-[#c5a059]"></span> Concierge
-                    </h5>
+                <div>
+                    <h5 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Concierge</h5>
                     <ul class="space-y-4">
                         <li>
-                            <a href="tel:+16094310538" class="text-slate-400 hover:text-white text-sm transition-colors flex items-center gap-3 group">
-                                <i data-lucide="smartphone" class="w-4 h-4 text-[#c5a059] group-hover:scale-110 transition-transform"></i> (609) 431-0538
+                            <a href="tel:+16094310538" class="text-slate-400 hover:text-[#c5a059] text-sm transition-colors flex items-center gap-2">
+                                <i data-lucide="smartphone" class="w-3 h-3"></i> (609) 431-0538
                             </a>
                         </li>
-                        <li class="text-slate-500 text-xs italic ml-7">For Urgent Pickups</li>
+                        <li class="text-slate-500 text-xs italic">Text or Call for Pickup</li>
                     </ul>
                 </div>
 
-                <div class="md:col-span-3">
-                    <h5 class="text-white font-bold uppercase tracking-[0.2em] text-xs mb-8 flex items-center gap-2">
-                        <span class="w-2 h-px bg-[#c5a059]"></span> Support
-                    </h5>
+                <div>
+                    <h5 class="text-white font-bold uppercase tracking-widest text-xs mb-6">Customer Service</h5>
                     <ul class="space-y-4">
                         <li>
-                            <a href="tel:+19088992193" class="text-slate-400 hover:text-white text-sm transition-colors flex items-center gap-3 group">
-                                <i data-lucide="headset" class="w-4 h-4 text-[#c5a059] group-hover:scale-110 transition-transform"></i> (908) 899-2193
+                            <a href="tel:+19088992193" class="text-slate-400 hover:text-[#c5a059] text-sm transition-colors flex items-center gap-2">
+                                <i data-lucide="headset" class="w-3 h-3"></i> (908) 899-2193
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:support@acpickupwashdryfold.com" class="text-slate-400 hover:text-white text-sm transition-colors flex items-center gap-3 group">
-                                <i data-lucide="mail" class="w-4 h-4 text-[#c5a059] group-hover:scale-110 transition-transform"></i> Email Support
+                            <a href="mailto:support@acpickupwashdryfold.com" class="text-slate-400 hover:text-[#c5a059] text-sm transition-colors flex items-center gap-2">
+                                <i data-lucide="mail" class="w-3 h-3"></i> Email Support
                             </a>
                         </li>
                     </ul>
@@ -534,11 +598,8 @@
             </div>
 
             <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <div class="text-slate-500 text-xs uppercase tracking-widest font-light">
+                <div class="text-slate-600 text-xs uppercase tracking-widest">
                     &copy; 2024 AC Wash Dry Fold Pick up & delivery service. All Rights Reserved.
-                </div>
-                <div class="text-slate-600 text-xs">
-                    Proudly serving Atlantic City, NJ
                 </div>
             </div>
         </div>
@@ -555,13 +616,11 @@
                     entry.target.classList.add('visible');
                 }
             });
-        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+        }, { threshold: 0.1 });
 
         document.querySelectorAll('.animate-on-scroll').forEach((el) => {
             observer.observe(el);
         });
-        
-        // Note: Custom form submission script removed as Jotform handles its own submissions natively.
     </script>
 </body>
 </html>
